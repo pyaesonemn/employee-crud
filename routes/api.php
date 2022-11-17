@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::post("user/signup", [UserController::class, "signup"]);
 Route::post("user/login", [UserController::class, "login"]);
-Route::put("user/update", [UserController::class, "updateInfo"]);
 
 Route::middleware(['auth:api'])->group(function () {
+    // Update User Info Route
+    Route::put("user/update", [UserController::class, "updateInfo"]);
+    // Employee Routes
     Route::resource('employees', EmployeeController::class);
 });
 

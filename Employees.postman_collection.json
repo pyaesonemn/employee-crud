@@ -308,6 +308,16 @@
 		{
 			"name": "Update User Info",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [
 					{
@@ -327,12 +337,12 @@
 						},
 						{
 							"key": "password",
-							"value": "password123",
+							"value": "password1234",
 							"type": "text"
 						},
 						{
 							"key": "password_confirmation",
-							"value": "password123",
+							"value": "password1234",
 							"type": "text"
 						},
 						{
@@ -380,7 +390,7 @@
 						},
 						{
 							"key": "password",
-							"value": "password123",
+							"value": "password1234",
 							"type": "text"
 						},
 						{
